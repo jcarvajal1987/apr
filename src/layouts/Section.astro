@@ -1,0 +1,38 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    id: string;
+}
+const { title, description,id} = Astro.props;
+---
+
+<section id={id} class="encabezado grid w-full items-center realative">
+    <div class="col-start-1 row-start-1 h-screen hidden"></div>
+    <div class="col-start-1 row-start-1 flex flex-1 w-full h-full flex-col">
+        <div class="h-[87px]"></div>
+        <div class="px-5 flex flex-1 w-full items-center">
+            <div class="w-full md:w-11/12 max-w-[1280px] m-auto flex-col  flex ">
+                <div id="publicaciones-sticky" class="w-full text-black md:text-left  ">
+                    <p
+                        class="md:pt-0 manrope text-center md:text-left text-sm sm:text-sm font-light italic text-[#CD5F3A] md:text-black-2"
+                    >
+                        APR Abogados
+                    </p>
+                    <h1
+                        class="mt-5 montserrat text-2xl font-semibold !leading-[-1rem] !md:leading-tight tracking-tight sm:text-4xl"
+                    >
+                        {title}
+                    </h1>
+                    <p
+                        class="pt-3 manrope text-center md:text-left text-sm sm:text-lg font-medium  text-black md:text-black-2 md:leading-6"
+                    >
+                        <span class="text-teal-800 font-medium">{description}</span>
+                    </p>
+                </div>
+                <slot />
+            </div>
+        </div>
+        <div class="h-[8px]"></div>
+    </div>
+</section>

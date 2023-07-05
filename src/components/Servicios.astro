@@ -1,0 +1,61 @@
+---
+import ServiceItem from "../components/ServiceItem.astro";
+import Section from "../layouts/Section.astro";
+const servicios = [
+    {
+        title: "Derecho Concursal",
+        description: "Tanto en la nominación como en la representación de partes en juicios arbitrales.",
+        img: "/quiebra.jpg",
+    },
+    {
+        title: "Juicios Civiles",
+        description: "Procedimientos legales para resolver disputas civiles.",
+        img: "/civiles.jpg",
+    },
+    {
+        title: "Derecho Comercial",
+        description: "Ley que regula el comercio, los negocios",
+        img: "/comercial.jpg",
+    },
+    {
+        title: "Sociedades",
+        description: "Ley que regula la asociación de personas para fines comunes.",
+        img: "/sociedades.jpg",
+    },
+    {
+        title: "Tramites Legales y Notariales",
+        description: "Procedimientos legales ante notarios y autoridades competentes.",
+        img: "/tramites.jpg",
+    },
+    {
+        title: "Juicios de Familia",
+        description: "Procesos judiciales relacionados con asuntos familiares.",
+        img: "/familia.jpg",
+    },
+];
+---
+<!-- subtitle="Nuestros Servicios" -->
+<Section id="Servicios"  title="Nuestra área de práctica legal" description="Asesoramiento legal especializado en diversas áreas para empresas y particulares.">
+    <div class="pt-8 w-full m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-10">
+        {
+            servicios.map((servicio) => (
+                <ServiceItem title={servicio.title} description={servicio.description} img={servicio.img} />
+            ))
+        }
+    </div>
+
+</Section>
+
+
+
+<script is:inline>
+function servicesSticky() {
+    const sticky = document.getElementById("servicios-sticky");
+    console.log("kyo");
+    sticky.style.top = (window.innerHeight - sticky.clientHeight) / 2 + 10 + `px`;
+
+    // sticky.style.top = window.innerHeight - sticky.clientHeight /2 + `px`;
+}
+servicesSticky();
+window.onresize = servicesSticky;
+</script>

@@ -1,0 +1,32 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    img: string;
+}
+const { title, description, img } = Astro.props;
+---
+
+<div class="">
+    <!-- <img src={img} alt=""> -->
+    <!-- <div class={`bg-red-500 w-full aspect-video bg-[url('`+img+`')]`} ></div> -->
+    <div class="p-1 border border-teal-800 rounded-full">
+        <div
+            style={`background-image:url('` + img + `')`}
+            class="bg-red-500 w-full aspect-video bg-no-repeat bg-cover rounded-full"
+        >
+        </div>
+    </div>
+    <!-- <div class="bg-red-500 w-full aspect-video bg-[url('/sociedades.jpg')]" ></div> -->
+    <div class="px-2 drop-shadow-lg">
+        <h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
+            {title}
+        </h1>
+        <!-- <p class="pt-1 manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            {description}
+        </p> -->
+        <div class="border w-fit m-auto px-3 py-1 mt-2 rounded-md cursor-pointer manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            Ver más
+        </div>
+    </div>
+</div>

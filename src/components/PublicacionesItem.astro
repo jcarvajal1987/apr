@@ -1,0 +1,31 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    img: string;
+}
+const { title, description, img } = Astro.props;
+---
+
+<div class=" bg-white flex flex-col border border-gray-200 rounded-md overflow-hidden">
+    <div
+        style={`background-image:url('` + img + `')`}
+        class="bg-red-500 w-full aspect-[4/3] bg-no-repeat bg-cover bg-[50%]"
+    >
+</div>
+
+<div class="px-4 pt-2 pb-4 flex flex-1 flex-col">
+
+
+<h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl    text-center">
+    {title}
+</h1>
+
+    <p class="pt-4 flex-1 manrope text-center text-sm font-medium text-black md:text-black-2 !leading-6">
+        {description}
+    </p>
+    <p class="pt-2  manrope text-center text-sm sm:text-xs font-medium text-teal-800 underline md:text-black-2 md:leading-5">
+        Leer Artículo
+    </p>
+</div>
+</div>

@@ -1,0 +1,58 @@
+<section id="Nosotros" class="encabezado grid w-full items-center realative">
+    <div class="col-start-1 row-start-1 h-screen hidden"></div>
+    <div class="col-start-1 row-start-1 flex flex-1 w-full h-full flex-col">
+        <div class="h-[37px]"></div>
+        <div class="px-5 flex flex-1 w-full items-center">
+            <div class="w-full md:w-11/12 max-w-[1280px] m-auto flex-col md:flex-row flex">
+                <div id="nosotros-sticky" class="md:pr-20 md:w-5/12 text-black text-center md:text-lefts md:sticky h-fit">
+                    <img src="/nosotros.webp" class="w-full" alt="" />
+                </div>
+                <div class="md:pt-20 md:pb-10 md:w-7/12 text-black text-center md:text-left">
+                    <p
+                        class="md:pt-0 manrope text-center md:text-left text-sm sm:text-sm font-light italic text-[#CD5F3A] md:text-black-2"
+                    >
+                        Sobre Nosotros
+                    </p>
+                    <h1
+                        class="mt-5 montserrat text-2xl font-medium !leading-[-1rem] !md:leading-tight tracking-tight sm:text-4xl"
+                    >
+                    En <b> APR GRUPO ABOGADOS</b>, somos expertos en la Ley de Quiebras
+                    </h1>
+                    <p
+                        class="pt-7 manrope text-center md:text-left text-sm sm:text-lg font-medium md:pr-0 lg:pr-24 text-neutral-500 md:text-black-2 leading-7 md:leading-8 !md:leading-tight"
+                    >
+                        Más de 3 años como apoderados de liquidadores y veedores concursales, nos
+                        han hecho tener un alto grado de conocimiento y capacitación en la ley de insolvencia y
+                        reemprendimiento abarcando de manera efectiva y sin SORPRESAS todos los frentes o etapas que
+                        tiene el procedimiento.- En nuestro proyecto <span class="text-teal-800 font-bold">QUIEBRA LEGAL</span> Te asesoramos y hacemos valer tus
+                        derechos frente a tus acreedores. Te orientamos y protegemos frente al actuar abusivo de las
+                        instituciones financieras y crediticias de comercio. QUIEBRA LEGAL, como proyecto, cuenta con
+                        abogados expertos y capacitados en personas y empresas con problemas de fluidez económica y que
+                        les produce la imposibilidad el pago de créditos hipotecarios, de consumo, automotriz, etc.
+                        Junto a nuestro equipo de APR GRUPO ABOGADOS, analizamos tu caso y en conjunto buscamos tu mejor
+                        opción frente a tus acreedores, y te acompañamos en todo el proceso de Liquidación o
+                        Renegociación concursal. Si quieres una asesoría seria y sin sorpresas al momento de declararte
+                        en Liquidación o Renegociación de tus deudas, llama a los expertos y se parte de una real y
+                        dedicada asesoría en Quiebras.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="h-[8px]"></div>
+    </div>
+</section>
+
+
+<script is:inline>
+    function nosotros() {
+        const sticky2 = document.getElementById("nosotros-sticky");
+        console.log(sticky2.clientHeight );
+    
+        sticky2.style.top = (window.innerHeight - sticky2.clientHeight) / 2 + 46 + `px`;
+    }
+    setTimeout(() => {
+        
+        nosotros();
+    }, 100);
+    window.onresize = nosotros;
+    </script>
