@@ -8,7 +8,7 @@ export default defineConfig({
   // output: 'static',
   // outDir: './docs',
   site: 'https://jcarvajal1987.github.io',
-  base:'/apr',
+  base:'/apr'
   // build: {
   //   format: 'file',
   //   assets: 'assests',
