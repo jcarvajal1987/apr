@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Abogados, Árbitros y Jueces Partidores.">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width">
+  		<meta name="keywords" content="Quiebra, Quiebra legal, Legal, Abogados en Chile, Oficina de abogados, Procesos concursales, Servicios Legales, Negociaciones, asesoria juridica,Ley 20.720,Ley de quiebra, Ley de insolvencia y reemprendimiento, Derecho de la empresa, Negociaciones, Compra Ventas, Asesorías comerciales pre y post, Judiciales, Representación y defensa empresas y personas, Tercería y embargos, Cobranzas, Indemnización y arriendos, Sumarios, particiones,Contratos civiles y comerciales, Escrituras públicas y privadas , Educación financiera PYMES">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+		<meta name="generator" content="Astro v2.7.1">
+		<title>APR Grupo Abogados.</title>
+		<link rel="preload" as="image" href="nosotros.jpg">
+	<link rel="stylesheet" href="/_astro/index.13d6292e.css" /></head>
+	<body>
+		
+<nav id="navbar" class=" z-10  fixed w-full transition2   astro-MMBOYBJ6">
+    <div class="bg-black h-9 w-full astro-MMBOYBJ6"></div>
+    <div class="bg-white drop-shadow-md px-5 py-2.5 md:py-0 border-b-[3px] border-teal-800 w-full astro-MMBOYBJ6">
+        <div class="max-w-[1280px] m-auto flex flex-wrap items-center justify-between senior astro-MMBOYBJ6">
+        <a href="#Home" class="flex items-center astro-MMBOYBJ6"><img alt="LM Tech" height="18" decoding="async" data-nimg="1" style="color:transparent" class="logo transition astro-MMBOYBJ6" src="./logo.svg"></a><button onclick="expandir()" data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 astro-MMBOYBJ6" aria-controls="navbar-solid-bg" aria-expanded="false"><span class="sr-only astro-MMBOYBJ6">Open main menu</span>
+            <span class="list-none text-xl astro-MMBOYBJ6"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="astro-MMBOYBJ6">
+                    <line x1="3" y1="12" x2="21" y2="12" class="astro-MMBOYBJ6"></line>
+                    <line x1="3" y1="6" x2="21" y2="6" class="astro-MMBOYBJ6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18" class="astro-MMBOYBJ6"></line>
+                </svg></span>
+        </button>
+        <div style="max-height:0;" class="bg-black md:bg-transparent absolute md:static left-0 top-[58px] duration-700 overflow-hidden w-full md:block md:w-auto min-h-auto-important astro-MMBOYBJ6" id="abrir">
+            <ul onclick="; expandir()" id="altura" class="px-5 md:p-0 flex flex-col pt-4 pb-8 rounded-lg md:flex-row md:space-x-8 md:pt-0 md:text-sm md:font-medium md:border-0 md:dark:bg-transparent dark:border-gray-700 astro-MMBOYBJ6">
+                <li>
+    <a class="text-gray-900 manrope md:hover:bg-teal-800 md:hover:text-white md:bg-transparent duration-100 block py-4 px-4 md:border-b-[3px] md:pt-5 md:pb-4 border-transparent text-lg" href="#Nosotros">Nosotros</a>
+</li><li>
+    <a class="text-gray-900 manrope md:hover:bg-teal-800 md:hover:text-white md:bg-transparent duration-100 block py-4 px-4 md:border-b-[3px] md:pt-5 md:pb-4 border-transparent text-lg" href="#Servicios">Servicios</a>
+</li><li>
+    <a class="text-gray-900 manrope md:hover:bg-teal-800 md:hover:text-white md:bg-transparent duration-100 block py-4 px-4 md:border-b-[3px] md:pt-5 md:pb-4 border-transparent text-lg" href="#actualidad">actualidad</a>
+</li><li>
+    <a class="text-gray-900 manrope md:hover:bg-teal-800 md:hover:text-white md:bg-transparent duration-100 block py-4 px-4 md:border-b-[3px] md:pt-5 md:pb-4 border-transparent text-lg" href="#Inmobiliaria">Inmobiliaria</a>
+</li><li>
+    <a class="text-gray-900 manrope md:hover:bg-teal-800 md:hover:text-white md:bg-transparent duration-100 block py-4 px-4 md:border-b-[3px] md:pt-5 md:pb-4 border-transparent text-lg" href="#contacto">contacto</a>
+</li>
+                
+            </ul>
+        </div>
+        <a href="#nosotros" class=" hidden lg:block font-normal text-md rounded-lg text-center px-2 pb-1 w-[130px] bg-gradient-to-b from-teal-700  to-teal-900 text-white astro-MMBOYBJ6">
+                Conócenos
+              </a>
+    </div>
+
+</div>
+</nav>
+
+<script>
+    const abrir = document.getElementById("abrir");
+    const navbar = document.getElementById("navbar");
+
+    let state = true;
+    function expandir() {
+        const altura = document.getElementById("altura").clientHeight;
+        if (state === true) {
+            abrir.style.maxHeight = altura + `px`;
+            document.querySelector("#navbar").classList.add("bg-negro");
+            // abrir.style.backgroundColor =  `black`;
+            // navbar.style.backgroundColor =  `black`;
+        } else {
+            abrir.style.maxHeight = "0";
+            document.querySelector("#navbar").classList.remove("bg-negro");
+            // abrir.style.backgroundColor =  `transparent`;
+            // navbar.style.backgroundColor =  `transparent`;
+        }
+        // document.getElementById("check").checked = false;
+
+        state = !state;
+    }
+</script>
+		
+	<main>
+		<section id="Home" style="background-image:url('./bg3.jpg')" class="encabezado bg-front bg-[70%] grid w-full items-center bg-no-repeat bg-cover realative astro-XHAOQXBD">
+    <div class="col-start-1 row-start-1 h-screen md:block 3xl:hidden astro-XHAOQXBD"></div>
+    <div class="col-start-1 row-start-1 flex flex-1 w-full h-full flex-col astro-XHAOQXBD">
+        <div class="h-[93px] astro-XHAOQXBD"></div>
+        <div class="py-[7%] px-5 flex flex-1 w-full items-center relative astro-XHAOQXBD">
+            <div class="w-full md:w-11/12 max-w-[1280px] m-auto astro-XHAOQXBD">
+                <div class="md:w-7/12 text-black text-center md:text-left astro-XHAOQXBD">
+                    <p class="md:pt-0 manrope text-center md:text-left text-sm sm:text-sm font-light italic text-[#CD5F3A] md:text-black-2 astro-XHAOQXBD">
+                        Estudio Juridico
+                    </p>
+                    <h1 class="mt-5 montserrat text-2xl font-semibold !leading-[-1rem] !md:leading-tight tracking-tight sm:text-6xl astro-XHAOQXBD">
+                        APR Abogados 2
+                    </h1>
+                    <p class="pt-7 manrope text-center md:text-left text-sm sm:text-lg font-medium md:pr-0 lg:pr-24 text-black md:text-black-2 astro-XHAOQXBD">
+                    Somos un equipo de abogados especializados en derecho de quiebras y reestructuración financiera comprometidos en brindarte el asesoramiento legal que necesitas.
+                    </p>
+                    <div class="flex-col md:flex-row m-auto md:mx-0 p-2 md:p-0 flex gap-4 max-w-[190px] my-8 md:mb-0 astro-XHAOQXBD">
+                        <a href="#nosotros" class="font-normal text-lg rounded-lg text-center px-2 py-2 w-full bg-gradient-to-b from-teal-700 to-teal-900 text-white astro-XHAOQXBD">
+                            Conócenos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 p-10 md:px-14 w-full astro-XHAOQXBD">
+                <a href="https://wa.me/56224567150" class="astro-XHAOQXBD"><img width="220" src="/whatsapp.svg" alt="" class="float-right astro-XHAOQXBD" aria-label="Contactar por whatsaap"></a>
+            </div>
+        </div>
+        <div class="h-[48px] bg-white drop-shadow-[0_-5px_2px_rgba(0,0,0,0.07)] relative astro-XHAOQXBD">
+
+        </div>
+    </div>
+    
+</section>
+		<section id="Nosotros" class="encabezado grid w-full items-center realative">
+    <div class="col-start-1 row-start-1 h-screen hidden"></div>
+    <div class="col-start-1 row-start-1 flex flex-1 w-full h-full flex-col">
+        <div class="h-[37px]"></div>
+        <div class="px-5 flex flex-1 w-full items-center">
+            <div class="w-full md:w-11/12 max-w-[1280px] m-auto flex-col md:flex-row flex">
+                <div id="nosotros-sticky" class="md:pr-20 md:w-5/12 text-black text-center md:text-lefts md:sticky h-fit">
+                    <img src="/nosotros.webp" class="w-full" alt="">
+                </div>
+                <div class="md:pt-20 md:pb-10 md:w-7/12 text-black text-center md:text-left">
+                    <p class="md:pt-0 manrope text-center md:text-left text-sm sm:text-sm font-light italic text-[#CD5F3A] md:text-black-2">
+                        Sobre Nosotros
+                    </p>
+                    <h1 class="mt-5 montserrat text-2xl font-medium !leading-[-1rem] !md:leading-tight tracking-tight sm:text-4xl">
+                    En <b> APR GRUPO ABOGADOS</b>, somos expertos en la Ley de Quiebras
+                    </h1>
+                    <p class="pt-7 manrope text-center md:text-left text-sm sm:text-lg font-medium md:pr-0 lg:pr-24 text-neutral-500 md:text-black-2 leading-7 md:leading-8 !md:leading-tight">
+                        Más de 3 años como apoderados de liquidadores y veedores concursales, nos
+                        han hecho tener un alto grado de conocimiento y capacitación en la ley de insolvencia y
+                        reemprendimiento abarcando de manera efectiva y sin SORPRESAS todos los frentes o etapas que
+                        tiene el procedimiento.- En nuestro proyecto <span class="text-teal-800 font-bold">QUIEBRA LEGAL</span> Te asesoramos y hacemos valer tus
+                        derechos frente a tus acreedores. Te orientamos y protegemos frente al actuar abusivo de las
+                        instituciones financieras y crediticias de comercio. QUIEBRA LEGAL, como proyecto, cuenta con
+                        abogados expertos y capacitados en personas y empresas con problemas de fluidez económica y que
+                        les produce la imposibilidad el pago de créditos hipotecarios, de consumo, automotriz, etc.
+                        Junto a nuestro equipo de APR GRUPO ABOGADOS, analizamos tu caso y en conjunto buscamos tu mejor
+                        opción frente a tus acreedores, y te acompañamos en todo el proceso de Liquidación o
+                        Renegociación concursal. Si quieres una asesoría seria y sin sorpresas al momento de declararte
+                        en Liquidación o Renegociación de tus deudas, llama a los expertos y se parte de una real y
+                        dedicada asesoría en Quiebras.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="h-[8px]"></div>
+    </div>
+</section>
+
+
+<script>
+    function nosotros() {
+        const sticky2 = document.getElementById("nosotros-sticky");
+        console.log(sticky2.clientHeight );
+    
+        sticky2.style.top = (window.innerHeight - sticky2.clientHeight) / 2 + 46 + `px`;
+    }
+    setTimeout(() => {
+        
+        nosotros();
+    }, 100);
+    window.onresize = nosotros;
+    </script>
+		<!-- subtitle="Nuestros Servicios" --><section id="Servicios" class="encabezado grid w-full items-center realative">
+    <div class="col-start-1 row-start-1 h-screen hidden"></div>
+    <div class="col-start-1 row-start-1 flex flex-1 w-full h-full flex-col">
+        <div class="h-[87px]"></div>
+        <div class="px-5 flex flex-1 w-full items-center">
+            <div class="w-full md:w-11/12 max-w-[1280px] m-auto flex-col  flex ">
+                <div id="publicaciones-sticky" class="w-full text-black md:text-left  ">
+                    <p class="md:pt-0 manrope text-center md:text-left text-sm sm:text-sm font-light italic text-[#CD5F3A] md:text-black-2">
+                        APR Abogados
+                    </p>
+                    <h1 class="mt-5 montserrat text-2xl font-semibold !leading-[-1rem] !md:leading-tight tracking-tight sm:text-4xl">
+                        Nuestra área de práctica legal
+                    </h1>
+                    <p class="pt-3 manrope text-center md:text-left text-sm sm:text-lg font-medium  text-black md:text-black-2 md:leading-6">
+                        <span class="text-teal-800 font-medium">Asesoramiento legal especializado en diversas áreas para empresas y particulares.</span>
+                    </p>
+                </div>
+                
+    <div class="pt-8 w-full m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-10">
+        <div class="">
+    <!-- <img src={img} alt=""> -->
+    <!-- <div class={`bg-red-500 w-full aspect-video bg-[url('`+img+`')]`} ></div> -->
+    <div class="p-1 border border-teal-800 rounded-full">
+        <div style="background-image:url('/quiebra.jpg')" class="bg-red-500 w-full aspect-video bg-no-repeat bg-cover rounded-full">
+        </div>
+    </div>
+    <!-- <div class="bg-red-500 w-full aspect-video bg-[url('/sociedades.jpg')]" ></div> -->
+    <div class="px-2 drop-shadow-lg">
+        <h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
+            Derecho Concursal
+        </h1>
+        <!-- <p class="pt-1 manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            {description}
+        </p> -->
+        <div class="border w-fit m-auto px-3 py-1 mt-2 rounded-md cursor-pointer manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            Ver más
+        </div>
+    </div>
+</div><div class="">
+    <!-- <img src={img} alt=""> -->
+    <!-- <div class={`bg-red-500 w-full aspect-video bg-[url('`+img+`')]`} ></div> -->
+    <div class="p-1 border border-teal-800 rounded-full">
+        <div style="background-image:url('/civiles.jpg')" class="bg-red-500 w-full aspect-video bg-no-repeat bg-cover rounded-full">
+        </div>
+    </div>
+    <!-- <div class="bg-red-500 w-full aspect-video bg-[url('/sociedades.jpg')]" ></div> -->
+    <div class="px-2 drop-shadow-lg">
+        <h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
+            Juicios Civiles
+        </h1>
+        <!-- <p class="pt-1 manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            {description}
+        </p> -->
+        <div class="border w-fit m-auto px-3 py-1 mt-2 rounded-md cursor-pointer manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            Ver más
+        </div>
+    </div>
+</div><div class="">
+    <!-- <img src={img} alt=""> -->
+    <!-- <div class={`bg-red-500 w-full aspect-video bg-[url('`+img+`')]`} ></div> -->
+    <div class="p-1 border border-teal-800 rounded-full">
+        <div style="background-image:url('/comercial.jpg')" class="bg-red-500 w-full aspect-video bg-no-repeat bg-cover rounded-full">
+        </div>
+    </div>
+    <!-- <div class="bg-red-500 w-full aspect-video bg-[url('/sociedades.jpg')]" ></div> -->
+    <div class="px-2 drop-shadow-lg">
+        <h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
+            Derecho Comercial
+        </h1>
+        <!-- <p class="pt-1 manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            {description}
+        </p> -->
+        <div class="border w-fit m-auto px-3 py-1 mt-2 rounded-md cursor-pointer manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            Ver más
+        </div>
+    </div>
+</div><div class="">
+    <!-- <img src={img} alt=""> -->
+    <!-- <div class={`bg-red-500 w-full aspect-video bg-[url('`+img+`')]`} ></div> -->
+    <div class="p-1 border border-teal-800 rounded-full">
+        <div style="background-image:url('/sociedades.jpg')" class="bg-red-500 w-full aspect-video bg-no-repeat bg-cover rounded-full">
+        </div>
+    </div>
+    <!-- <div class="bg-red-500 w-full aspect-video bg-[url('/sociedades.jpg')]" ></div> -->
+    <div class="px-2 drop-shadow-lg">
+        <h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
+            Sociedades
+        </h1>
+        <!-- <p class="pt-1 manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            {description}
+        </p> -->
+        <div class="border w-fit m-auto px-3 py-1 mt-2 rounded-md cursor-pointer manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            Ver más
+        </div>
+    </div>
+</div><div class="">
+    <!-- <img src={img} alt=""> -->
+    <!-- <div class={`bg-red-500 w-full aspect-video bg-[url('`+img+`')]`} ></div> -->
+    <div class="p-1 border border-teal-800 rounded-full">
+        <div style="background-image:url('/tramites.jpg')" class="bg-red-500 w-full aspect-video bg-no-repeat bg-cover rounded-full">
+        </div>
+    </div>
+    <!-- <div class="bg-red-500 w-full aspect-video bg-[url('/sociedades.jpg')]" ></div> -->
+    <div class="px-2 drop-shadow-lg">
+        <h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
+            Tramites Legales y Notariales
+        </h1>
+        <!-- <p class="pt-1 manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            {description}
+        </p> -->
+        <div class="border w-fit m-auto px-3 py-1 mt-2 rounded-md cursor-pointer manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            Ver más
+        </div>
+    </div>
+</div><div class="">
+    <!-- <img src={img} alt=""> -->
+    <!-- <div class={`bg-red-500 w-full aspect-video bg-[url('`+img+`')]`} ></div> -->
+    <div class="p-1 border border-teal-800 rounded-full">
+        <div style="background-image:url('/familia.jpg')" class="bg-red-500 w-full aspect-video bg-no-repeat bg-cover rounded-full">
+        </div>
+    </div>
+    <!-- <div class="bg-red-500 w-full aspect-video bg-[url('/sociedades.jpg')]" ></div> -->
+    <div class="px-2 drop-shadow-lg">
+        <h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
+            Juicios de Familia
+        </h1>
+        <!-- <p class="pt-1 manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            {description}
+        </p> -->
+        <div class="border w-fit m-auto px-3 py-1 mt-2 rounded-md cursor-pointer manrope text-center text-sm sm:text-xs font-medium text-black md:text-black-2 md:leading-5">
+            Ver más
+        </div>
+    </div>
+</div>
+    </div>
+
+
+            </div>
+        </div>
+        <div class="h-[8px]"></div>
+    </div>
+</section>
+
+
+
+<script>
+function servicesSticky() {
+    const sticky = document.getElementById("servicios-sticky");
+    console.log("kyo");
+    sticky.style.top = (window.innerHeight - sticky.clientHeight) / 2 + 10 + `px`;
+
+    // sticky.style.top = window.innerHeight - sticky.clientHeight /2 + `px`;
+}
+servicesSticky();
+window.onresize = servicesSticky;
+</script>
+		<section id="actualidad" class="encabezado grid w-full items-center realative">
+    <div class="col-start-1 row-start-1 h-screen hidden"></div>
+    <div class="col-start-1 row-start-1 flex flex-1 w-full h-full flex-col">
+        <div class="h-[87px]"></div>
+        <div class="px-5 flex flex-1 w-full items-center">
+            <div class="w-full md:w-11/12 max-w-[1280px] m-auto flex-col  flex ">
+                <div id="publicaciones-sticky" class="w-full text-black md:text-left  ">
+                    <p class="md:pt-0 manrope text-center md:text-left text-sm sm:text-sm font-light italic text-[#CD5F3A] md:text-black-2">
+                        APR Abogados
+                    </p>
+                    <h1 class="mt-5 montserrat text-2xl font-semibold !leading-[-1rem] !md:leading-tight tracking-tight sm:text-4xl">
+                        Publicaciones de actualidad legal APR Grupo Abogados
+                    </h1>
+                    <p class="pt-3 manrope text-center md:text-left text-sm sm:text-lg font-medium  text-black md:text-black-2 md:leading-6">
+                        <span class="text-teal-800 font-medium">Conozca las últimas publicaciones y noticias de interés preparadas por nuestro estudio jurídico.</span>
+                    </p>
+                </div>
+                
+    <div class="pt-8 md:w-12/12 m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
+        <div class=" bg-white flex flex-col border border-gray-200 rounded-md overflow-hidden">
+    <div style="background-image:url('/blog-1.webp')" class="bg-red-500 w-full aspect-[4/3] bg-no-repeat bg-cover bg-[50%]">
+</div>
+
+<div class="px-4 pt-2 pb-4 flex flex-1 flex-col">
+
+
+<h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl    text-center">
+    Quiebra tus deudas.
+</h1>
+
+    <p class="pt-4 flex-1 manrope text-center text-sm font-medium text-black md:text-black-2 !leading-6">
+        El tema de las deudas y la búsqueda de soluciones legales para aliviar su carga es de gran importancia tanto para personas naturales como para empresas en Chile. 
+    </p>
+    <p class="pt-2  manrope text-center text-sm sm:text-xs font-medium text-teal-800 underline md:text-black-2 md:leading-5">
+        Leer Artículo
+    </p>
+</div>
+</div><div class=" bg-white flex flex-col border border-gray-200 rounded-md overflow-hidden">
+    <div style="background-image:url('/blog-2.webp')" class="bg-red-500 w-full aspect-[4/3] bg-no-repeat bg-cover bg-[50%]">
+</div>
+
+<div class="px-4 pt-2 pb-4 flex flex-1 flex-col">
+
+
+<h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl    text-center">
+    ¡Estamos contigo!
+</h1>
+
+    <p class="pt-4 flex-1 manrope text-center text-sm font-medium text-black md:text-black-2 !leading-6">
+        Como abogados comprometidos con brindarles un servicio eficiente y accesible, nos complace informarles que hemos ampliado nuestros canales de comunicación
+    </p>
+    <p class="pt-2  manrope text-center text-sm sm:text-xs font-medium text-teal-800 underline md:text-black-2 md:leading-5">
+        Leer Artículo
+    </p>
+</div>
+</div><div class=" bg-white flex flex-col border border-gray-200 rounded-md overflow-hidden">
+    <div style="background-image:url('/blog-3.webp')" class="bg-red-500 w-full aspect-[4/3] bg-no-repeat bg-cover bg-[50%]">
+</div>
+
+<div class="px-4 pt-2 pb-4 flex flex-1 flex-col">
+
+
+<h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl    text-center">
+    ¿El Dinero ya no alcanza?
+</h1>
+
+    <p class="pt-4 flex-1 manrope text-center text-sm font-medium text-black md:text-black-2 !leading-6">
+        Es un placer proporcionarte información sobre los requisitos para declararte en insolvencia en el país. La insolvencia, también conocida como &quot;quiebra&quot;
+    </p>
+    <p class="pt-2  manrope text-center text-sm sm:text-xs font-medium text-teal-800 underline md:text-black-2 md:leading-5">
+        Leer Artículo
+    </p>
+</div>
+</div>
+            </div>
+
+            </div>
+        </div>
+        <div class="h-[8px]"></div>
+    </div>
+</section>
+		<section id="Inmobiliaria" class="encabezado grid w-full items-center realative">
+    <div class="col-start-1 row-start-1 h-screen hidden"></div>
+    <div class="col-start-1 row-start-1 flex flex-1 w-full h-full flex-col">
+        <div class="h-[87px]"></div>
+        <div class="px-5 flex flex-1 w-full items-center">
+            <div class="w-full md:w-11/12 max-w-[1280px] m-auto flex-col  flex ">
+                <div id="publicaciones-sticky" class="w-full text-black md:text-left  ">
+                    <p class="md:pt-0 manrope text-center md:text-left text-sm sm:text-sm font-light italic text-[#CD5F3A] md:text-black-2">
+                        APR Abogados
+                    </p>
+                    <h1 class="mt-5 montserrat text-2xl font-semibold !leading-[-1rem] !md:leading-tight tracking-tight sm:text-4xl">
+                        PORTAFOLIO INMOBILIARIO
+                    </h1>
+                    <p class="pt-3 manrope text-center md:text-left text-sm sm:text-lg font-medium  text-black md:text-black-2 md:leading-6">
+                        <span class="text-teal-800 font-medium">Propiedades en Venta o Arriendo</span>
+                    </p>
+                </div>
+                
+    <div class="pt-8 md:w-12/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <a href="#" class="flex flex-col">
+    <div class="p-1 border border-teal-800 rounded-full overflow-hidden">
+
+        <div style="background-image:url('/casa.jpg')" class="rounded-full  w-full aspect-video bg-no-repeat bg-cover rflex">
+    </div>
+</div>
+    
+    <div class="px-4 pt-2 pb-4 flex flex-1 flex-col">
+        <h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
+            Casas y Departamentos.
+        </h1>
+
+        <p class="pt-2 flex-1 manrope text-center text-sm font-medium text-black md:text-black-2 md:leading-5">
+            Viviendas en venta o arriendo
+        </p>
+        <p class="pt-2 manrope text-center text-sm sm:text-sm font-medium text-teal-800 underline md:text-black-2 md:leading-5">
+            Visitar
+        </p>
+    </div>
+</a><a href="#" class="flex flex-col">
+    <div class="p-1 border border-teal-800 rounded-full overflow-hidden">
+
+        <div style="background-image:url('/oficinas.jpg')" class="rounded-full  w-full aspect-video bg-no-repeat bg-cover rflex">
+    </div>
+</div>
+    
+    <div class="px-4 pt-2 pb-4 flex flex-1 flex-col">
+        <h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
+            Comerciales
+        </h1>
+
+        <p class="pt-2 flex-1 manrope text-center text-sm font-medium text-black md:text-black-2 md:leading-5">
+            Oficinas, Negocios u otros con fin comercial
+        </p>
+        <p class="pt-2 manrope text-center text-sm sm:text-sm font-medium text-teal-800 underline md:text-black-2 md:leading-5">
+            Visitar
+        </p>
+    </div>
+</a><a href="#" class="flex flex-col">
+    <div class="p-1 border border-teal-800 rounded-full overflow-hidden">
+
+        <div style="background-image:url('/rurales.jpg')" class="rounded-full  w-full aspect-video bg-no-repeat bg-cover rflex">
+    </div>
+</div>
+    
+    <div class="px-4 pt-2 pb-4 flex flex-1 flex-col">
+        <h1 class="montserrat mt-2 text-lg font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
+            Terrenos y otros
+        </h1>
+
+        <p class="pt-2 flex-1 manrope text-center text-sm font-medium text-black md:text-black-2 md:leading-5">
+            Terrenos rurales y para construcción
+        </p>
+        <p class="pt-2 manrope text-center text-sm sm:text-sm font-medium text-teal-800 underline md:text-black-2 md:leading-5">
+            Visitar
+        </p>
+    </div>
+</a>
+    </div>
+
+            </div>
+        </div>
+        <div class="h-[8px]"></div>
+    </div>
+</section>
+		<section id="contacto" class="encabezado grid w-full bg-black2">
+    <div class="col-start-1 row-start-1 flex flex-1 w-full h-2/5 bg-black2 self-end flex-col"></div>
+    <div class="col-start-1 row-start-1 flex flex-1 w-full h-full flex-col">
+        <div class="h-[67px] bg-white"></div>
+        <div class="px-3 md:px-0 w-full">
+            <div class="w-full md:w-11/12 max-w-[1140px] mt-4 md:mt-16 m-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+                <div class="rounded-md overflow-hidden items-center">
+                    <h1 class="montserrat text-4xl text-white font-semibold leading-[-1rem] md:leading-tight tracking-tight sm:text-5xl">
+                        Solicite una Consulta
+                    </h1>
+                    <div class="flex mt-7">
+                        <span class="w-[100px] h-[1px] bg-[#2B9CEE] block mb-[-2px]"></span>
+                        <span class="w-full h-[1px] bg-[#6C6C6C] block mb-[-2px]"></span>
+                    </div>
+
+                    <p class="text-white pt-7 pb-5 montserrat">
+                        Contáctenos y nuestro equipo le respondera sus consultas a la brevedad.
+                    </p>
+
+                    <form>
+                        <div class="relative w-full mb-6 group">
+                            <input type="email" name="floating_email" id="floating_email" class="rounded-lg px-2 block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer" placeholder=" " required>
+                            <label for="floating_email" class="bg-black2 px-3 ml-1 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 - origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus:dark:text-teal-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre y Apellido</label>
+                        </div>
+                        <div class="relative w-full mb-6 group">
+                            <input type="email" name="floating_password" id="floating_password" class="rounded-lg px-2 block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer" placeholder=" " required>
+                            <label for="floating_password" class="bg-black2 px-3 ml-1 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 - origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus:dark:text-teal-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
+                        </div>
+                        <div class="relative w-full mb-6 group">
+                            <input type="password" name="repeat_password" id="floating_repeat_password" class="rounded-lg px-2 block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer" placeholder=" " required>
+                            <label for="floating_repeat_password" class="bg-black2 px-3 ml-1 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 - origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus:dark:text-teal-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Teléfono</label>
+                        </div>
+                        <div class="relative w-full mb-6 group">
+                            <textarea rows="8" cols="33" name="repeat_password" id="message" class="rounded-lg px-2 block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer" placeholder=" " required></textarea>
+                            <label for="message" class="bg-black2 px-3 ml-1 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 - origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus:dark:text-teal-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Escribe tu consulta</label>
+                        </div>
+
+                        <button type="submit" class="w-full max-w-[600px] text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="rounded-md overflow-hidden items-center pt-6 gap-12 flex flex-col">
+                    <a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=-33.437851950541%2C-70.654782056808" class="flex gap-4 items-center w-full">
+                        <img src="/location.svg" width="30" alt="">
+                        <p class="text-white montserrat ml-4">
+                            Doctor Sótero del Río 508 Oficina 1006, Santiago - Chile.
+                        </p>
+                    </a>
+                    <span class="flex gap-4 items-center w-full">
+                        <img src="/phone.svg" width="30" alt="">
+                        <p class="text-white montserrat ml-4">+56 2 24567150</p>
+                    </span>
+                    <span class="flex gap-4 items-center w-full">
+                        <img src="/mail.svg" width="30" alt="">
+                        <p class="text-white montserrat ml-4">contacto@aprgrupoabogados.cl</p>
+                    </span>
+                    <span class="flex gap-4 items-center w-full">
+                        <img src="/twitter.svg" width="32" alt="">
+                        <a href="https://twitter.com/apr_abogados_cl" class="text-white montserrat ml-4">@APR_Abogados_Cl</a>
+                    </span>
+                    <span class="flex w-full">
+                        <iframe title="GoogleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.4488373578106!2d-70.65739442537256!3d-33.437611073394585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a51b63b6b3%3A0xf20434902593373f!2sDr.%20Sotero%20del%20R%C3%ADo%20508%2C%208340297%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1683078124443!5m2!1ses!2scl" width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="h-[68px]"></div>
+    </div>
+</section>
+
+<footer class="bg-black2 flex">
+    <div class="px-3 md:px-0 w-full">
+        <div class="w-full md:w-10/12 max-w-[1140px] mt-4 mb-10 md:my-16 m-auto flex flex-col items-center gap-10">
+            <img class="flex" src="/logo2.svg" width="250" alt="">
+           
+        </div>
+
+        <div class="w-full md:w-11/12 max-w-[1140px] text-white py-4 m-auto flex flex-row justify-center border-t-[1px] border-[#6C6C6C]">
+            <span class="margin-auto flex"> © 2008 - 2023</span>
+        </div>
+    </div>
+</footer>
+	</main>
+
+	</body></html>

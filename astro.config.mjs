@@ -6,9 +6,9 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   // output: 'static',
-  // outDir: './docs',
-  site: 'https://jcarvajal1987.github.io',
-  base:'/apr'
+  outDir: './docs',
+  // site: 'https://jcarvajal1987.github.io',
+  // base:'/apr',
   // build: {
   //   format: 'file',
   //   assets: 'assests',
