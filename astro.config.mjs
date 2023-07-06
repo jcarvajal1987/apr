@@ -9,9 +9,9 @@ export default defineConfig({
   outDir: './docs',
   // site: 'https://jcarvajal1987.github.io',
   // base:'/apr',
-  // build: {
-  //   format: 'file',
-  //   assets: 'assests',
-  //   assetsPrefix: '.'
-  // }
+  build: {
+    format: 'file',
+    // assets: 'assests',
+    assetsPrefix: '.'
+  }
 });
