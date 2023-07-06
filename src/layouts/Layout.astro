@@ -21,13 +21,65 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="preload" as="image" href="nosotros.jpg">
+		<link rel="preload" as="image" href="nosotros.webp">
 	</head>
 	<body>
 		<Navbar/>
 		<slot />
 	</body>
 </html>
+<script is:inline>
+	const encabezados = document.querySelectorAll('.encabezado');
+	const enlaces = document.querySelectorAll('#altura li a')
+	console.log(encabezados)
+	const observer = new IntersectionObserver((entradas, observador) => {
+		  entradas.forEach(entrada => {
+			if (entrada.isIntersecting) {
+			  const id = '#' + entrada.target.id;
+			  history.pushState({}, '', id);
+			  enlaces.forEach(enlace => {
+				enlace.classList.remove('text-white', 'bg-teal-800')
+				const href = enlace.attributes.href.value;
+				if (href === id) {
+				  enlace.classList.add('text-white', 'bg-teal-800')
+				}
+			  })
+			}
+		  })
+		}, {
+		  // threshold: 1,
+		  rootMargin: '-50%'
+		});
+	
+		encabezados.forEach(encabezado => {
+		  observer.observe(encabezado);
+		})
+	
+		// abrir menu mobile
+	
+	
+	const abrir = document.getElementById("abrir");
+	const navbar = document.getElementById("navbar");
+	
+	let state = true;
+	function expandir() {
+		const altura = document.getElementById("altura").clientHeight;
+		if (state === true) {
+			abrir.style.maxHeight = altura + `px`;
+			document.querySelector("#navbar").classList.add("bg-negro");
+			// abrir.style.backgroundColor =  `black`;
+			// navbar.style.backgroundColor =  `black`;
+		} else {
+			abrir.style.maxHeight = "0";
+			document.querySelector("#navbar").classList.remove("bg-negro");
+			// abrir.style.backgroundColor =  `transparent`;
+			// navbar.style.backgroundColor =  `transparent`;
+		}
+		// document.getElementById("check").checked = false;
+	
+		state = !state;
+	}
+	</script>
 <style is:global>
 	:root {
 		--accent: 124, 58, 237;
