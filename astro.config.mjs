@@ -11,7 +11,7 @@ export default defineConfig({
   // base:'/apr',
   build: {
     format: 'file',
-    // assets: 'assests',
+    assets: 'assests',
     assetsPrefix: '.'
   }
 });
