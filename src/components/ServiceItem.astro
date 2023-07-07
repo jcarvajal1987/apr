@@ -8,7 +8,7 @@ export interface Props {
 const { id,title, description, img } = Astro.props;
 ---
 
-<a onclick={'modal("'+ id +'")'} class="pointer-events-auto cursor-pointer">
+<div onclick={'modal("'+ id +'")'} class="pointer-events-auto cursor-pointer">
     <!-- <img src={img} alt=""> -->
     <!-- <div class={`bg-red-500 w-full aspect-video bg-[url('`+img+`')]`} ></div> -->
     <div class="p-1 border border-teal-800 rounded-full">
@@ -30,4 +30,4 @@ const { id,title, description, img } = Astro.props;
             Ver más
         </div> -->
     </div>
-</a>
+</div>
