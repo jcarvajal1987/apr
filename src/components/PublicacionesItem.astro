@@ -3,14 +3,15 @@ export interface Props {
     title: string;
     description: string;
     img: string;
+    id: string;
 }
-const { title, description, img } = Astro.props;
+const { title, description, img,id } = Astro.props;
 ---
 
-<div class=" bg-white flex flex-col border border-gray-200 rounded-md overflow-hidden">
+<div onclick={'modal("'+ id +'")'} class=" bg-white flex flex-col border border-gray-200 rounded-md overflow-hidden">
     <div
         style={`background-image:url('` + img + `')`}
-        class="bg-red-500 w-full aspect-[4/3] bg-no-repeat bg-cover bg-[50%]"
+        class="w-full aspect-[4/3] bg-no-repeat bg-cover bg-[50%]"
     >
 </div>
 
