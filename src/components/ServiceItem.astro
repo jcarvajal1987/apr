@@ -1,13 +1,14 @@
 ---
 export interface Props {
+    id: string;
     title: string;
     description: string;
     img: string;
 }
-const { title, description, img } = Astro.props;
+const { id,title, description, img } = Astro.props;
 ---
 
-<div class="">
+<a onclick={'modal("'+ id +'")'}>
     <!-- <img src={img} alt=""> -->
     <!-- <div class={`bg-red-500 w-full aspect-video bg-[url('`+img+`')]`} ></div> -->
     <div class="p-1 border border-teal-800 rounded-full">
@@ -29,4 +30,4 @@ const { title, description, img } = Astro.props;
             Ver más
         </div>
     </div>
-</div>
+</a>

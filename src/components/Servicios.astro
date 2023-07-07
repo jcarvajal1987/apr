@@ -1,36 +1,49 @@
 ---
 import ServiceItem from "../components/ServiceItem.astro";
 import Section from "../layouts/Section.astro";
+import Modal from "./Modal.astro";
 const servicios = [
     {
         title: "Derecho Concursal",
         description: "Tanto en la nominación como en la representación de partes en juicios arbitrales.",
+        descent:["Solicitud de Liquidación Voluntaria de Personas.","Solicitud de Liquidación Voluntaria de Empresas.","Reorganizaciones por Ley 20.720.","Representante de Créditos de Acreedores.","Representante de Acreedores en solicitud de notas de Débito.","Apoderado de Liquidadores Concursales.","Apoderado de Veedores Concursales.","Estudio de Factibilidad jurídico – Técnica en solicitudes de Quiebra (Liquidación o Reorganización)."],
         img: "./quiebra.jpg",
+        id:"modal1"
     },
     {
         title: "Juicios Civiles",
         description: "Procedimientos legales para resolver disputas civiles.",
+        descent:["kokun","vegeta"],
         img: "./civiles.jpg",
+        id:"modal2"
     },
     {
         title: "Derecho Comercial",
         description: "Ley que regula el comercio, los negocios",
+        descent:["kokun","vegeta"],
         img: "./comercial.jpg",
+        id:"modal3"
     },
     {
         title: "Sociedades",
         description: "Ley que regula la asociación de personas para fines comunes.",
+        descent:["kokun","vegeta"],
         img: "./sociedades.jpg",
+        id:"modal4"
     },
     {
         title: "Tramites Legales y Notariales",
         description: "Procedimientos legales ante notarios y autoridades competentes.",
+        descent:["kokun","vegeta"],
         img: "./tramites.jpg",
+        id:"modal5"
     },
     {
         title: "Juicios de Familia",
         description: "Procesos judiciales relacionados con asuntos familiares.",
+        descent:["kokun","vegeta"],
         img: "./familia.jpg",
+        id:"modal6"
     },
 ];
 ---
@@ -39,12 +52,25 @@ const servicios = [
     <div class="pt-8 w-full m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-10">
         {
             servicios.map((servicio) => (
-                <ServiceItem title={servicio.title} description={servicio.description} img={servicio.img} />
+                <ServiceItem title={servicio.title} description={servicio.description} img={servicio.img} id={servicio.id} />
             ))
         }
     </div>
 
 </Section>
+
+{
+    servicios.map((servicio) => (
+    <Modal id={servicio.id} title={servicio.title} description={servicio.descent} img="./quiebra.jpg">
+    
+                    
+    
+    
+</Modal>
+    ))
+}
+
+
 
 
 
