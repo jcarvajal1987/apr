@@ -1,5 +1,5 @@
 ---
-import Navbar from './Navbar.astro';
+import Navbar from "./Navbar.astro";
 export interface Props {
 	title: string;
 }
@@ -11,75 +11,77 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Abogados, Árbitros y Jueces Partidores.">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+		<meta name="description" content="Abogados, Árbitros y Jueces Partidores." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&family=Montserrat:wght@500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="viewport" content="width=device-width" />
-  		<meta name="keywords"
-        content="Quiebra, Quiebra legal, Legal, Abogados en Chile, Oficina de abogados, Procesos concursales, Servicios Legales, Negociaciones, asesoria juridica,Ley 20.720,Ley de quiebra, Ley de insolvencia y reemprendimiento, Derecho de la empresa, Negociaciones, Compra Ventas, Asesorías comerciales pre y post, Judiciales, Representación y defensa empresas y personas, Tercería y embargos, Cobranzas, Indemnización y arriendos, Sumarios, particiones,Contratos civiles y comerciales, Escrituras públicas y privadas , Educación financiera PYMES">
+		<meta
+			name="keywords"
+			content="Quiebra, Quiebra legal, Legal, Abogados en Chile, Oficina de abogados, Procesos concursales, Servicios Legales, Negociaciones, asesoria juridica,Ley 20.720,Ley de quiebra, Ley de insolvencia y reemprendimiento, Derecho de la empresa, Negociaciones, Compra Ventas, Asesorías comerciales pre y post, Judiciales, Representación y defensa empresas y personas, Tercería y embargos, Cobranzas, Indemnización y arriendos, Sumarios, particiones,Contratos civiles y comerciales, Escrituras públicas y privadas , Educación financiera PYMES"
+		/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="preload" as="image" href="nosotros.webp">
+		<link rel="preload" as="image" href="nosotros.webp" />
 	</head>
 	<body>
-		<Navbar/>
+		<Navbar />
 		<slot />
 	</body>
 </html>
 <script is:inline>
-	const encabezados = document.querySelectorAll('.encabezado');
-	const enlaces = document.querySelectorAll('#altura li a')
-	console.log(encabezados)
-	const observer = new IntersectionObserver((entradas, observador) => {
-		  entradas.forEach(entrada => {
+const encabezados = document.querySelectorAll(".encabezado");
+const enlaces = document.querySelectorAll("#altura li a");
+const observer = new IntersectionObserver(
+	(entradas, observador) => {
+		entradas.forEach((entrada) => {
 			if (entrada.isIntersecting) {
-			  const id = '#' + entrada.target.id;
-			  history.pushState({}, '', id);
-			  enlaces.forEach(enlace => {
-				enlace.classList.remove('text-white', 'bg-teal-800')
-				const href = enlace.attributes.href.value;
-				if (href === id) {
-				  enlace.classList.add('text-white', 'bg-teal-800')
-				}
-			  })
+				const id = "#" + entrada.target.id;
+				history.pushState({}, "", id);
+				enlaces.forEach((enlace) => {
+					enlace.classList.remove("text-white", "bg-teal-800");
+					const href = enlace.attributes.href.value;
+					if (href === id) {
+						enlace.classList.add("text-white", "bg-teal-800");
+					}
+				});
 			}
-		  })
-		}, {
-		  // threshold: 1,
-		  rootMargin: '-50%'
 		});
-	
-		encabezados.forEach(encabezado => {
-		  observer.observe(encabezado);
-		})
-	
-		// abrir menu mobile
-	
-	
-	const abrir = document.getElementById("abrir");
-	const navbar = document.getElementById("navbar");
-	
-	let state = true;
-	function expandir() {
-		const altura = document.getElementById("altura").clientHeight;
-		if (state === true) {
-			abrir.style.maxHeight = altura + `px`;
-			document.querySelector("#navbar").classList.add("bg-negro");
-			// abrir.style.backgroundColor =  `black`;
-			// navbar.style.backgroundColor =  `black`;
-		} else {
-			abrir.style.maxHeight = "0";
-			document.querySelector("#navbar").classList.remove("bg-negro");
-			// abrir.style.backgroundColor =  `transparent`;
-			// navbar.style.backgroundColor =  `transparent`;
-		}
-		// document.getElementById("check").checked = false;
-	
-		state = !state;
+	},
+	{
+		// threshold: 1,
+		rootMargin: "-50%",
 	}
-	</script>
+);
+
+encabezados.forEach((encabezado) => {
+	observer.observe(encabezado);
+});
+
+// abrir menu mobile
+
+const abrir = document.getElementById("abrir");
+
+let state = true;
+function expandir() {
+	const altura = document.getElementById("altura").clientHeight;
+	if (state === true) {
+		abrir.style.maxHeight = altura + `px`;
+	} else {
+		abrir.style.maxHeight = "0";
+	}
+	state = !state;
+}
+
+function modal(el_id) {
+    document.getElementById(el_id).classList.toggle("modal-trigger");
+    document.body.classList.toggle("overflow-hidden");
+    }
+</script>
 <style is:global>
 	:root {
 		--accent: 124, 58, 237;
@@ -90,32 +92,32 @@ const { title } = Astro.props;
 		scroll-behavior: smooth;
 	}
 	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+			Courier New, monospace;
 	}
-	.manrope{
-    font-family: Manrope, sans-serif;
-}
-.montserrat{
-    font-family: 'Montserrat', sans-serif;
-}
-.modal-trigger {
-    opacity: 1!important;
-    pointer-events: all!important;
-}
-.modal {
-    transition: 1s;
-    opacity: 0;
-	cursor: pointer;
-    pointer-events: none;
-    position: fixed; /* Stay in place */
-    z-index: 999; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
-  }
+	.manrope {
+		font-family: Manrope, sans-serif;
+	}
+	.montserrat {
+		font-family: "Montserrat", sans-serif;
+	}
+	.modal-trigger {
+		opacity: 1 !important;
+		pointer-events: all !important;
+	}
+	.modal {
+		transition: 1s;
+		opacity: 0;
+		cursor: pointer;
+		pointer-events: none;
+		position: fixed; /* Stay in place */
+		z-index: 999; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0, 0, 0); /* Fallback color */
+		background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+	}
 </style>

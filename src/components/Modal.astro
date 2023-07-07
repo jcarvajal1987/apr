@@ -5,39 +5,42 @@ export interface Props {
     description: string[];
     img: string;
 }
-const { id,title, description, img } = Astro.props;
+const { id, title, description, img } = Astro.props;
 ---
-<div id={id} onclick={'modal("'+ id +'")'} class="modal transition duration-1000 h-full 0">
+
+<div id={id} onclick={'modal("' + id + '")'} class="modal transition duration-1000 h-full 0">
     <div
-        class="bg-white overflow-auto col-start-1 row-start-1 flex justify-center w-full flex-col  max-w-[1100px] m-auto mt-7 cursor-auto drop-shadow-xl rounded-md"
-        onclick="event.cancelBubble = true; if (event.stopPropagation) event.stopPropagation(); "
+        class="bg-white overflow-auto col-start-1 row-start-1 flex justify-center flex-col w-fit max-w-[1100px] md:min-w-[700px] m-auto mt-7 cursor-auto drop-shadow-xl rounded-md"
+        onclick="event.cancelBubble = true; if (event.stopPropagation) event.stopPropagation();"
     >
-        <div class="flex p-5 fixed right-0 top-0 bg-white rounded-full drop-shadow-md cursor-pointer">
-            <img onclick={'modal("'+ id +'")'} width="30px" src="./close.svg" alt="" />
+        <div
+            class="flex p-5 fixed right-0 top-0 bg-white rounded-full drop-shadow-md md:drop-shadow-none cursor-pointer"
+        >
+            <img onclick={'modal("' + id + '")'} width="30px" src="./close.svg" alt="" />
         </div>
         <div class="p-7 md:py-20 md:px-0 montserrat w-full flex">
             <div class="w-full md:w-11/12 max-w-[1240px] m-auto flex items-center flex-col md:flex-row">
-                <div class="w-full md:w-auto self-start">
+                <!-- <div class="w-full md:w-auto self-start">
                     <img class="hidden md:block" src="img/servicio-concursal.jpg" alt="" />
                     <img class="block md:hidden w-full" src="img/servicio-concursal-movil.jpg" alt="" />
-                </div>
-                <div class="text-left md:mx-10 mt-5 md:mt-0 flex-col">
+                </div> -->
+                <div class="text-left md:mx-10 mt-5 md:mt-0 flex-col w-full">
                     <h1
                         class="montserrat text-4xl font-semibold leading-[-1rem] !md:leading-tight tracking-tight sm:text-4xl"
                     >
                         {title}
                     </h1>
-                    <hr class="border-primary flex w-full border-[1.5px] mt-5 md:mt-4" />
-                    <p class="flex flex-1 pt-5 text-lg md:pt-7 pb-5 text-left">
+                    <hr class="border-primary flex w-full border-[1.5px] mt-5 md:mt-4 w-full" />
+                    <p class="flex flex-1 pt-5 text-lg md:pt-5 pb-8 text-left text-primary">
                         Los servicios de {title} son :
                     </p>
                     {
-                        description.map((item)=>(
-                        <span class="flex flex-row items-center pb-4">
-        <div class="flex pr-5 md:px-5">•</div>
-        <p class="flex flex-1 text-lg">{item}</p>
-    </span>
-                        ) )
+                        description.map((item) => (
+                            <span class="flex flex-row items-center pb-3">
+                                <div class="flex pr-5 md:px-5 text-3xl">•</div>
+                                <p class="flex flex-1 text-md">{item}</p>
+                            </span>
+                        ))
                     }
                 </div>
             </div>
@@ -45,11 +48,4 @@ const { id,title, description, img } = Astro.props;
     </div>
 </div>
 
-<script is:inline>
-    function modal(el_id) {
-      console.log(el_id)
-      document.getElementById(el_id).classList.toggle("modal-trigger");
-      document.body.classList.toggle("overflow-hidden");
 
-    };
-</script>

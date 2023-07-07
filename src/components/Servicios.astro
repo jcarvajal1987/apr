@@ -6,82 +6,135 @@ const servicios = [
     {
         title: "Derecho Concursal",
         description: "Tanto en la nominación como en la representación de partes en juicios arbitrales.",
-        descent:["Solicitud de Liquidación Voluntaria de Personas.","Solicitud de Liquidación Voluntaria de Empresas.","Reorganizaciones por Ley 20.720.","Representante de Créditos de Acreedores.","Representante de Acreedores en solicitud de notas de Débito.","Apoderado de Liquidadores Concursales.","Apoderado de Veedores Concursales.","Estudio de Factibilidad jurídico – Técnica en solicitudes de Quiebra (Liquidación o Reorganización)."],
+        descent: [
+            "Solicitud de Liquidación Voluntaria de Personas.",
+            "Solicitud de Liquidación Voluntaria de Empresas.",
+            "Reorganizaciones por Ley 20.720.",
+            "Representante de Créditos de Acreedores.",
+            "Representante de Acreedores en solicitud de notas de Débito.",
+            "Apoderado de Liquidadores Concursales.",
+            "Apoderado de Veedores Concursales.",
+            "Estudio de Factibilidad jurídico – Técnica en solicitudes de Quiebra (Liquidación o Reorganización).",
+        ],
         img: "./quiebra.jpg",
-        id:"modal1"
+        id: "modal1",
     },
     {
         title: "Juicios Civiles",
         description: "Procedimientos legales para resolver disputas civiles.",
-        descent:["kokun","vegeta"],
+        descent: [
+            "Juicios de Arriendo",
+            "Incidentes",
+            "Tercerías",
+            "Embargos",
+            "Remates",
+            "Juicios de Comodato",
+            "Juicios de Comodato Precario",
+            "Juicios de Partición",
+            "Juicios Ejecutivos",
+            "Juicios Ordinarios",
+            "Juicios Sumarios",
+            "Demanda de Indemnización de Perjuicios",
+            "Cambios de Nombres",
+            "Rectificación de Partidas",
+            "Cobros de Cheques, Letras, Pagares y Facturas (cobranza prejudicial y judicial)",
+            "Defensa a deudores",
+            "Solicitud de Prescripción Civil",
+            "Posesiones Efectivas Testadas",
+            "Declaración de Interdicción",
+            "Juicios Hipotecarios",
+            "Asesorías en causas civiles",
+        ],
         img: "./civiles.jpg",
-        id:"modal2"
+        id: "modal2",
     },
     {
         title: "Derecho Comercial",
         description: "Ley que regula el comercio, los negocios",
-        descent:["kokun","vegeta"],
+        descent: [
+            "Ley de microempresa familiar",
+            "Derecho de la empresa",
+            "Negociaciones",
+            "Compra ventas",
+            "Asesorías a empresas",
+            "Asesorías Contables para Personas Naturales y Jurídicas",
+        ],
         img: "./comercial.jpg",
-        id:"modal3"
+        id: "modal3",
     },
     {
         title: "Sociedades",
         description: "Ley que regula la asociación de personas para fines comunes.",
-        descent:["kokun","vegeta"],
+        descent: ["Constitución de todo tipo de sociedades", "Modificación de sociedades", "Disolución de sociedades"],
         img: "./sociedades.jpg",
-        id:"modal4"
+        id: "modal4",
     },
     {
         title: "Tramites Legales y Notariales",
         description: "Procedimientos legales ante notarios y autoridades competentes.",
-        descent:["kokun","vegeta"],
+        descent: [
+            "Estudios de Título",
+            "Compraventas",
+            "Cesión de Derechos",
+            "Testamentos",
+            "Saneamiento de la Pequeña Propiedad Raíz",
+            "Posesiones Efectivas Intestadas",
+            "Representación ante Servicios Públicos",
+            "Redacción de Contratos",
+            "Escrituras Públicas",
+            "Escrituras Privadas",
+            "Estudio de Contratos",
+            "Asesorías Integrales",
+            "Corretaje de Propiedades",
+            "Administración de Edificios y Condominios",
+        ],
         img: "./tramites.jpg",
-        id:"modal5"
+        id: "modal5",
     },
     {
         title: "Juicios de Familia",
         description: "Procesos judiciales relacionados con asuntos familiares.",
-        descent:["kokun","vegeta"],
+        descent: [
+            "Juicios de Divorcio",
+            "Juicios de Alimentos, Rebajas y Aumentos",
+            "Juicios de Cumplimientos de Alimentos",
+            "Juicios de Relación Directa y Regular (Visitas)",
+            "Juicios de Cuidado Personal o Tuición",
+            "Autorización para Salir del País",
+            "Juicios de Adopción y Susceptibilidad de Adopción",
+            "Juicios de Violencia Intrafamiliar",
+            "Medidas de Protección",
+            "Declaración de Bien Familiar",
+            "Juicios de Reclamación e Impugnación de Paternidad",
+        ],
         img: "./familia.jpg",
-        id:"modal6"
+        id: "modal6",
     },
 ];
 ---
+
 <!-- subtitle="Nuestros Servicios" -->
-<Section id="Servicios"  title="Nuestra área de práctica legal" description="Asesoramiento legal especializado en diversas áreas para empresas y particulares.">
+<Section
+    id="Servicios"
+    title="Nuestra área de práctica legal"
+    description="Asesoramiento legal especializado en diversas áreas para empresas y particulares."
+>
     <div class="pt-8 w-full m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-10">
         {
             servicios.map((servicio) => (
-                <ServiceItem title={servicio.title} description={servicio.description} img={servicio.img} id={servicio.id} />
+                <ServiceItem
+                    title={servicio.title}
+                    description={servicio.description}
+                    img={servicio.img}
+                    id={servicio.id}
+                />
             ))
         }
     </div>
-
 </Section>
 
 {
     servicios.map((servicio) => (
-    <Modal id={servicio.id} title={servicio.title} description={servicio.descent} img="./quiebra.jpg">
-    
-                    
-    
-    
-</Modal>
+        <Modal id={servicio.id} title={servicio.title} description={servicio.descent} img="./quiebra.jpg" />
     ))
 }
-
-
-
-
-
-<script is:inline>
-function servicesSticky() {
-    const sticky = document.getElementById("servicios-sticky");
-    console.log("kyo");
-    sticky.style.top = (window.innerHeight - sticky.clientHeight) / 2 + 10 + `px`;
-
-    // sticky.style.top = window.innerHeight - sticky.clientHeight /2 + `px`;
-}
-servicesSticky();
-window.onresize = servicesSticky;
-</script>
