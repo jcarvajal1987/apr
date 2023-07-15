@@ -1,0 +1,262 @@
+---
+
+const inmobiliaria = [
+    {
+        title: "casas",
+        description:"Estas son las propiedades a su disposicion:",
+        items: {
+            title:"SIERRA BELLA 1334 - SANTIAGO",
+            description:"Casa en sector Sierra Bella, construcción antigua, terreno de 173 m2 aproximadamente. A 8 minutos caminando del metro Matta.",
+            comuna:" SANTIAGO",
+            direccion:"SIERRA BELLA 1334",
+            mts2:"173",
+            dormitorios:"3",
+            estacionamiento:"0",
+            banos:"1",
+            imgs:["img1.jpg","img2.jpg"]
+        }
+    }
+    ]
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Abogados, Árbitros y Jueces Partidores." />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&family=Montserrat:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <meta name="viewport" content="width=device-width" />
+        <meta
+            name="keywords"
+            content="PORTAFOLIO INMOBILIARIO,Casas,Departamentos,Locales Comerciales,Oficinas,Terrenos Agricolas"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>APR Grupo Abogados</title>
+    </head>
+    <body>
+        <section class="encabezado grid w-full items-center realative">
+            <div class="col-start-1 row-start-1 h-screen hidden"></div>
+            <div class="col-start-1 row-start-1 flex flex-1 w-full h-full flex-col">
+                <div class="h-[87px]"></div>
+                <div class="px-5 flex flex-1 w-full items-center">
+                    <div class="w-full md:w-11/12 max-w-[1280px] m-auto flex-col flex">
+                        <div class="w-full text-black text-center md:text-left">
+                            <p
+                                class="md:pt-0 manrope text-center md:text-left text-xl sm:text-sm font-light italic text-[#CD5F3A] md:text-black-2"
+                            >
+                                APR Abogados
+                            </p>
+                            <h1
+                                class="mt-5 montserrat text-3xl font-semibold !leading-[-1rem] !md:leading-tight tracking-tight sm:text-4xl"
+                            >
+                            PORTAFOLIO INMOBILIARIO
+                            </h1>
+                            <!-- <p
+                                class="pt-3 manrope text-center md:text-left text-xl sm:text-lg font-medium text-black md:text-black-2 md:leading-6 mb-5 md:mb-0"
+                            >
+                                <span class="text-teal-800 font-medium">description</span>
+                            </p> -->
+                        </div>
+                        <!-- content -->
+                        <div class="pt-10">
+                            <ul class="nav nav-tabs">
+                                <li class="tab-1" onclick="; aplicar('tab-1')"><a>Tab 1</a></li>
+                                <li class="tab-2" onclick="; aplicar('tab-2')"><a>Tab 2</a></li>
+                                <li class="tab-3" onclick="; aplicar('tab-3')"><a>Tab 3</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane active">
+                                    <span
+                                        class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"
+                                    ></span>
+                                    <span class="col-md-10">
+                                        <h3>Feature 1</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    </span>
+                                </div>
+                                <div id="tab-2" class="tab-pane">
+                                    <span
+                                        class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"
+                                    ></span>
+                                    <span class="col-md-10">
+                                        <h3>Feature 2</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    </span>
+                                </div>
+                                <div id="tab-3" class="tab-pane">
+                                    <span
+                                        class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"
+                                    ></span>
+                                    <span class="col-md-10">
+                                        <h3>Feature 3</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- content -->
+                    </div>
+                </div>
+                <div class="h-[8px]"></div>
+            </div>
+        </section>
+    </body>
+</html>
+
+<style is:global>
+    :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+    }
+    html {
+        font-family: system-ui, sans-serif;
+        scroll-behavior: smooth;
+    }
+    code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+            Courier New, monospace;
+    }
+    .manrope {
+        font-family: Manrope, sans-serif;
+    }
+    .montserrat {
+        font-family: "Montserrat", sans-serif;
+    }
+    .modal-trigger {
+        opacity: 1 !important;
+        pointer-events: all !important;
+    }
+    .modal {
+        transition: 1s;
+        opacity: 0;
+        cursor: pointer;
+        pointer-events: none;
+        position: fixed; /* Stay in place */
+        z-index: 999; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    }
+    /* section */
+    .nav-tabs {
+        float: left;
+        width: 100%;
+        margin: 0;
+        list-style-type: none;
+        border-bottom: 1px solid #ddd;
+    }
+    li {
+        float: left;
+        margin-bottom: -1px;
+        cursor: pointer;
+    }
+    a {
+        float: left;
+        margin-right: 2px;
+        line-height: 1.42857143;
+        padding: 10px;
+        border: 1px solid transparent;
+        border-radius: 4px 4px 0 0;
+    }
+    a:hover {
+        border-color: #eee #eee #ddd;
+    }
+    li.active a,
+    a:focus,
+    a:hover {
+        background-color: #115e59;
+        color: #eee;
+    }
+    .tab-content {
+        float: left;
+        width: 100%;
+    }
+    .tab-pane {
+        display: none;
+    }
+    .tab-pane.active {
+        display: block;
+        padding: 2.5% 3.5%;
+        background-color: #efefef;
+    }
+</style>
+
+<script is:inline>
+var myTabs = document.querySelectorAll("ul.nav-tabs > li");
+var myContentPanes = document.querySelectorAll(".tab-pane");
+function aplicar(id) {
+    const push = "#" + id;
+    history.pushState({}, "", push);
+    myTabs.forEach((tab) => {
+        if (tab.classList.contains(id)) {
+            tab.classList.add("active");
+        } else {
+            tab.classList.remove("active");
+        }
+    });
+    myContentPanes.forEach((tab) => {
+        if (tab.id === id) {
+            tab.classList.add("active");
+        } else {
+            tab.classList.remove("active");
+        }
+    });
+}
+function init() {
+    var URLhash = window.location.hash;
+    const newURLhash = URLhash.slice(1);
+    myTabs.forEach((tab) => {
+        if (tab.classList.contains(newURLhash)) {
+            tab.classList.add("active");
+        } else {
+            tab.classList.remove("active");
+        }
+    });
+    myContentPanes.forEach((tab) => {
+        if (tab.id === newURLhash) {
+            tab.classList.add("active");
+        } else {
+            tab.classList.remove("active");
+        }
+    });
+}
+init();
+</script>
+
+<!-- <script is:inline>
+    window.addEventListener("load", function() {
+	// store tabs variable
+	var myTabs = document.querySelectorAll("ul.nav-tabs > li");
+  function myTabClicks(tabClickEvent) {
+		for (var i = 0; i < myTabs.length; i++) {
+			myTabs[i].classList.remove("active");
+		}
+		var clickedTab = tabClickEvent.currentTarget;
+		clickedTab.classList.add("active");
+		tabClickEvent.preventDefault();
+		var myContentPanes = document.querySelectorAll(".tab-pane");
+		for (i = 0; i < myContentPanes.length; i++) {
+			myContentPanes[i].classList.remove("active");
+		}
+		var anchorReference = tabClickEvent.target;
+		var activePaneId = anchorReference.getAttribute("href");
+		var activePane = document.querySelector(activePaneId);
+		activePane.classList.add("active");
+	}
+	for (i = 0; i < myTabs.length; i++) {
+		myTabs[i].addEventListener("click", myTabClicks)
+	}
+});
+
+</script> -->

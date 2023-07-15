@@ -14,21 +14,23 @@ const menu = ["Nosotros", "Servicios", "actualidad", "Inmobiliaria", "contacto"]
         }
     }
 </style>
-<nav id="navbar" class="z-10 fixed w-full transition2">
-    <!-- <div class="bg-black h-9 w-full"></div> -->
+<header>
+
+    <nav id="navbar" class="z-10 fixed w-full transition2">
+        <!-- <div class="bg-black h-9 w-full"></div> -->
     <div class="bg-white drop-shadow-md px-5 py-2.5 md:py-0 border-b-[3px] border-teal-800 w-full">
         <div class="max-w-[1280px] m-auto flex flex-wrap items-center justify-between senior">
             <a href="#Home" class="flex items-center"
-                ><img
-                    alt="LM Tech"
-                    height="18"
-                    decoding="async"
-                    data-nimg="1"
-                    style="color:transparent"
-                    class="logo transition"
-                    src="./logo.svg"
+            ><img
+            alt="LM Tech"
+            height="18"
+            decoding="async"
+            data-nimg="1"
+            style="color:transparent"
+            class="logo transition"
+            src="./logo.svg"
                 /></a
-            ><button
+                ><button
                 onclick="expandir()"
                 data-collapse-toggle="navbar-solid-bg"
                 type="button"
@@ -37,42 +39,43 @@ const menu = ["Nosotros", "Servicios", "actualidad", "Inmobiliaria", "contacto"]
                 aria-expanded="false"
                 ><span class="sr-only">Open main menu</span>
                 <span class="list-none text-xl"
-                    ><svg
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
+                ><svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
                     >
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <line x1="3" y1="18" x2="21" y2="18"></line>
                     </svg></span
-                >
-            </button>
-            <div
+                    >
+                </button>
+                <div
                 style="max-height:0;"
                 class="bg-white md:bg-transparent absolute md:static left-0 top-[58px] duration-700 overflow-hidden w-full md:block md:w-auto min-h-auto-important"
                 id="abrir"
             >
-                <ul
+            <ul
                     onclick="; expandir()"
                     id="altura"
                     class="px-5 md:p-0 flex flex-col pt-4 pb-8 rounded-lg md:flex-row md:space-x-8 md:pt-0 md:text-sm md:font-medium md:border-0 md:dark:bg-transparent dark:border-gray-700"
-                >
+                    >
                     {menu.map((nombre) => <NavButton title={nombre} />)}
                 </ul>
             </div>
             <a
-                href="#contacto"
-                class="hidden lg:block font-normal text-base rounded-lg text-center px-2 py-2 w-[180px] bg-gradient-to-b from-teal-700 to-teal-900 text-white"
+            href="#contacto"
+            class="hidden lg:block font-normal text-base rounded-lg text-center px-2 py-2 w-[180px] bg-gradient-to-b from-teal-700 to-teal-900 text-white"
             >
                 Solicite una Consulta
             </a>
         </div>
     </div>
 </nav>
+</header>
