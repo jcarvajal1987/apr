@@ -6,18 +6,20 @@ const inmobiliaria = [
         title: "Casas y Departamentos.",
         description: "Viviendas en venta o arriendo",
         img: "./casa.jpg",
+        go: "./propiedades#Casas",
     },
     {
         title: "Comerciales",
         description: "Oficinas, Negocios u otros con fin comercial",
         img: "./oficinas.jpg",
+        go: "./propiedades#Oficinas",
     },
     {
         title: "Terrenos y otros",
         description: "Terrenos rurales y para construcción",
         img: "./rurales.jpg",
+        go: "./propiedades#Terrenosagricolas",
     },
-    
 ];
 ---
 
@@ -25,7 +27,12 @@ const inmobiliaria = [
     <div class="pt-8 md:w-12/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         {
             inmobiliaria.map((servicio) => (
-                <InmobiliariaItem title={servicio.title} description={servicio.description} img={servicio.img} />
+                <InmobiliariaItem
+                    title={servicio.title}
+                    description={servicio.description}
+                    img={servicio.img}
+                    go={servicio.go}
+                />
             ))
         }
     </div>

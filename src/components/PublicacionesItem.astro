@@ -5,28 +5,29 @@ export interface Props {
     img: string;
     id: string;
 }
-const { title, description, img,id } = Astro.props;
+const { title, description, img, id } = Astro.props;
 ---
 
-<div onclick={'modal("'+ id +'")'} class=" bg-white flex flex-col border border-gray-200 rounded-md overflow-hidden cursor-pointer">
-    <div
-        style={`background-image:url('` + img + `')`}
-        class="w-full aspect-[4/3] bg-no-repeat bg-cover bg-[50%]"
-    >
-</div>
+<div
+    onclick={'modal("' + id + '")'}
+    class="bg-white flex flex-col border border-gray-200 rounded-md overflow-hidden cursor-pointer"
+>
+    <div style={`background-image:url('` + img + `')`} class="w-full aspect-[4/3] bg-no-repeat bg-cover bg-[50%]"></div>
 
-<div class="px-4 pt-2 pb-4 flex flex-1 flex-col">
+    <div class="px-4 pt-2 pb-4 flex flex-1 flex-col">
+        <h1 class="montserrat mt-2 text-2xl font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
+            {title}
+        </h1>
 
-
-<h1 class="montserrat mt-2 text-2xl font-semibold md:leading-5 !tracking-tight sm:text-xl    text-center">
-    {title}
-</h1>
-
-    <p class="pt-4 flex-1 manrope text-center text-xl md:text-base font-medium text-gray-900 md:text-black-2 md:!leading-6">
-        {description}
-    </p>
-    <p class="pt-2  manrope text-center text-lg sm:text-sm font-medium text-teal-800 underline md:text-black-2 md:leading-5">
-        Leer Artículo
-    </p>
-</div>
+        <p
+            class="pt-4 flex-1 manrope text-center text-xl md:text-base font-medium text-gray-900 md:text-black-2 md:!leading-6"
+        >
+            {description}
+        </p>
+        <p
+            class="pt-2 manrope text-center text-lg sm:text-sm font-medium text-teal-800 underline md:text-black-2 md:leading-5"
+        >
+            Leer Artículo
+        </p>
+    </div>
 </div>

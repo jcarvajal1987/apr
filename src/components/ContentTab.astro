@@ -1,0 +1,33 @@
+---
+import PropiedadItem from '../components/PropiedadItem.astro';
+import Modal3 from './Modal3.astro';
+export interface Props {
+	title: string;
+	id: string;
+	description: string;
+	items: string[];
+}
+const { title,id,description,items } = Astro.props;
+---
+
+<div id={id} class="tab-pane">
+    <span
+        class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"
+    ></span>
+    <span class="col-md-10">
+        <h3 class="montserrat mt-2 text-2xl font-semibold md:leading-5 !tracking-tight sm:text-lg md:hidden">{title}</h3>
+        <p>{description}</p>
+    </span>
+    <div class="pt-8 md:w-12/12 m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-7 lg:gap-16 xl:gap-6">
+        {items.map((item)=>(
+            <PropiedadItem item={item} />
+        ))}
+
+    </div>
+</div>
+{
+    items.map((item) => (
+        <Modal3 id={item.id} title={item.title}  imgs={item.imgs} />
+            
+    ))
+}

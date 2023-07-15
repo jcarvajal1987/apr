@@ -1,22 +1,91 @@
 ---
+import BarTab from "../components/BarTab.astro";
+import Contacto from "../components/Contacto.astro";
+import ContentTab from "../components/ContentTab.astro";
+import NavTab from "../components/NavTab.astro";
 
 const inmobiliaria = [
     {
-        title: "casas",
-        description:"Estas son las propiedades a su disposicion:",
-        items: {
-            title:"SIERRA BELLA 1334 - SANTIAGO",
-            description:"Casa en sector Sierra Bella, construcción antigua, terreno de 173 m2 aproximadamente. A 8 minutos caminando del metro Matta.",
-            comuna:" SANTIAGO",
-            direccion:"SIERRA BELLA 1334",
-            mts2:"173",
-            dormitorios:"3",
-            estacionamiento:"0",
-            banos:"1",
-            imgs:["img1.jpg","img2.jpg"]
-        }
-    }
-    ]
+        title: "Casas",
+        id: "Casas",
+        description: "Estas son las propiedades a su disposicion:",
+        items: [
+            {
+                title: "SIERRA BELLA 1334 - SANTIAGO",
+                id: "01",
+                description:
+                    "Casa en sector Sierra Bella, construcción antigua, terreno de 173 m2 aproximadamente. A 8 minutos caminando del metro Matta.",
+                comuna: " SANTIAGO",
+                direccion: "SIERRA BELLA 1334",
+                mts2: "173",
+                dormitorios: "3",
+                estacionamiento: "0",
+                banos: "1",
+                img: "./casa.jpg",
+                imgs: ["./casa.jpg", "./casa.jpg"],
+            },
+            {
+                title: "SIERRA BELLA 1334 - SANTIAGO2",
+                id: "02",
+                description: "Casa en sector Sierra Bella.",
+                comuna: " SANTIAGO",
+                direccion: "SIERRA BELLA 1334",
+                mts2: "173",
+                dormitorios: "3",
+                estacionamiento: "0",
+                banos: "1",
+                img: "./casa.jpg",
+                imgs: ["./sociedades.jpg", "./casa.jpg"],
+            },
+        ],
+    },
+    {
+        title: "Departamentos",
+        id: "Departamentos",
+        description: "Estas son las propiedades a su disposicion:",
+        items: [
+            {
+                title: "Prueba sin imagen",
+                id: "03",
+                description:
+                    "Casa en sector Sierra Bella, construcción antigua, terreno de 173 m2 aproximadamente. A 8 minutos caminando del metro Matta.",
+                comuna: " SANTIAGO",
+                direccion: "SIERRA BELLA 1334",
+                mts2: "173",
+                dormitorios: "3",
+                estacionamiento: "0",
+                banos: "1",
+                img: "./nodisponible.png",
+                imgs: ["./nodisponible.png"],
+            },
+        ],
+    },
+    {
+        title: "Locales Comerciales",
+        id: "LocalesComerciales",
+        description: "No existen propiedades para esta categoria.",
+        items: [],
+    },
+    {
+        title: "Oficinas",
+        id: "Oficinas",
+        description: "No existen propiedades para esta categoria.",
+        items: [],
+    },
+    {
+        title: "Otros",
+        id: "Otros",
+        description: "No existen propiedades para esta categoria.",
+        items: [],
+    },
+    {
+        title: "Terrenos Agrícolas",
+        id: "Terrenosagricolas",
+        description: "No existen propiedades para esta categoria.",
+        items: [],
+    },
+];
+console.log(inmobiliaria[0].items[0].id);
 ---
 
 <!DOCTYPE html>
@@ -33,20 +102,24 @@ const inmobiliaria = [
         <meta name="viewport" content="width=device-width" />
         <meta
             name="keywords"
-            content="PORTAFOLIO INMOBILIARIO,Casas,Departamentos,Locales Comerciales,Oficinas,Terrenos Agricolas"
+            content="PORTAFOLIO INMOBILIARIO,Casas,Departamentos,Locales Comerciales,Oficinas,Terrenos Agricolas, propiedades, venta de propiedades, arriendo de propiedades, oficinas, arriendo de oficinas, ariendo de casa,compra de terrenos "
         />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
+
         <title>APR Grupo Abogados</title>
+        <link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet" />
     </head>
     <body>
-        <section class="encabezado grid w-full items-center realative">
+        <div class="encabezado grid w-full items-center realative">
             <div class="col-start-1 row-start-1 h-screen hidden"></div>
             <div class="col-start-1 row-start-1 flex flex-1 w-full h-full flex-col">
-                <div class="h-[87px]"></div>
+                <div class="h-[27px] md:h-[57px]"></div>
                 <div class="px-5 flex flex-1 w-full items-center">
                     <div class="w-full md:w-11/12 max-w-[1280px] m-auto flex-col flex">
-                        <div class="w-full text-black text-center md:text-left">
+                        <header class="w-full text-black text-center md:text-left">
                             <p
                                 class="md:pt-0 manrope text-center md:text-left text-xl sm:text-sm font-light italic text-[#CD5F3A] md:text-black-2"
                             >
@@ -55,58 +128,37 @@ const inmobiliaria = [
                             <h1
                                 class="mt-5 montserrat text-3xl font-semibold !leading-[-1rem] !md:leading-tight tracking-tight sm:text-4xl"
                             >
-                            PORTAFOLIO INMOBILIARIO
+                                PORTAFOLIO INMOBILIARIO
                             </h1>
-                            <!-- <p
-                                class="pt-3 manrope text-center md:text-left text-xl sm:text-lg font-medium text-black md:text-black-2 md:leading-6 mb-5 md:mb-0"
-                            >
-                                <span class="text-teal-800 font-medium">description</span>
-                            </p> -->
-                        </div>
+                        </header>
                         <!-- content -->
-                        <div class="pt-10">
-                            <ul class="nav nav-tabs">
-                                <li class="tab-1" onclick="; aplicar('tab-1')"><a>Tab 1</a></li>
-                                <li class="tab-2" onclick="; aplicar('tab-2')"><a>Tab 2</a></li>
-                                <li class="tab-3" onclick="; aplicar('tab-3')"><a>Tab 3</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div id="tab-1" class="tab-pane active">
-                                    <span
-                                        class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"
-                                    ></span>
-                                    <span class="col-md-10">
-                                        <h3>Feature 1</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    </span>
-                                </div>
-                                <div id="tab-2" class="tab-pane">
-                                    <span
-                                        class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"
-                                    ></span>
-                                    <span class="col-md-10">
-                                        <h3>Feature 2</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    </span>
-                                </div>
-                                <div id="tab-3" class="tab-pane">
-                                    <span
-                                        class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"
-                                    ></span>
-                                    <span class="col-md-10">
-                                        <h3>Feature 3</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                        <main>
+                            <section class="pt-10">
+                                <BarTab>
+                                    {inmobiliaria.map((cat) => <NavTab title={cat.title} id={cat.id} />)}
+                                </BarTab>
 
+                                <div class="tab-content">
+                                    {
+                                        inmobiliaria.map((cat) => (
+                                            <ContentTab
+                                                title={cat.title}
+                                                id={cat.id}
+                                                description={cat.description}
+                                                items={cat.items}
+                                            />
+                                        ))
+                                    }
+                                </div>
+                            </section>
+                        </main>
                         <!-- content -->
                     </div>
                 </div>
                 <div class="h-[8px]"></div>
             </div>
-        </section>
+        </div>
+        <Contacto />
     </body>
 </html>
 
@@ -131,7 +183,7 @@ const inmobiliaria = [
     }
     .modal-trigger {
         opacity: 1 !important;
-        pointer-events: all !important;
+        pointer-events: auto !important;
     }
     .modal {
         transition: 1s;
@@ -139,56 +191,57 @@ const inmobiliaria = [
         cursor: pointer;
         pointer-events: none;
         position: fixed; /* Stay in place */
-        z-index: 999; /* Sit on top */
+        z-index: 10; /* Sit on top */
         left: 0;
         top: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
         width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
+        height: 100%; /* Full height */ /* Enable scroll if needed */
         background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+        background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
     }
+    .zindex {
+        z-index: 999;
+    }
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    /* Track */
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.392);
+    }
+
     /* section */
-    .nav-tabs {
-        float: left;
-        width: 100%;
-        margin: 0;
-        list-style-type: none;
-        border-bottom: 1px solid #ddd;
-    }
-    li {
-        float: left;
-        margin-bottom: -1px;
-        cursor: pointer;
-    }
-    a {
-        float: left;
-        margin-right: 2px;
-        line-height: 1.42857143;
-        padding: 10px;
-        border: 1px solid transparent;
-        border-radius: 4px 4px 0 0;
-    }
-    a:hover {
-        border-color: #eee #eee #ddd;
-    }
     li.active a,
     a:focus,
     a:hover {
-        background-color: #115e59;
-        color: #eee;
+        background-color: #25a59d;
+        color: #fff;
+        box-shadow: inset 0 2px 4px 0 rgba(0, 0, 5px, 0.9);
+        font-weight: 500;
+        text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
-    .tab-content {
-        float: left;
-        width: 100%;
-    }
+
     .tab-pane {
         display: none;
     }
     .tab-pane.active {
         display: block;
-        padding: 2.5% 3.5%;
-        background-color: #efefef;
+    }
+    .h-90 {
+        height: 90vh;
+    }
+    .splide__pagination__page {
+        border: 1px solid white !important;
+        opacity: 1 !important;
+    }
+    .splide__arrow {
+        background-color: white !important;
     }
 </style>
 
@@ -232,31 +285,19 @@ function init() {
     });
 }
 init();
+
+function modal(el_id) {
+    document.getElementById(el_id).classList.toggle("modal-trigger");
+    document.body.classList.toggle("overflow-hidden");
+}
 </script>
+<script is:inline src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+<script is:inline>
+var elms = document.getElementsByClassName("splide");
 
-<!-- <script is:inline>
-    window.addEventListener("load", function() {
-	// store tabs variable
-	var myTabs = document.querySelectorAll("ul.nav-tabs > li");
-  function myTabClicks(tabClickEvent) {
-		for (var i = 0; i < myTabs.length; i++) {
-			myTabs[i].classList.remove("active");
-		}
-		var clickedTab = tabClickEvent.currentTarget;
-		clickedTab.classList.add("active");
-		tabClickEvent.preventDefault();
-		var myContentPanes = document.querySelectorAll(".tab-pane");
-		for (i = 0; i < myContentPanes.length; i++) {
-			myContentPanes[i].classList.remove("active");
-		}
-		var anchorReference = tabClickEvent.target;
-		var activePaneId = anchorReference.getAttribute("href");
-		var activePane = document.querySelector(activePaneId);
-		activePane.classList.add("active");
-	}
-	for (i = 0; i < myTabs.length; i++) {
-		myTabs[i].addEventListener("click", myTabClicks)
-	}
-});
-
-</script> -->
+for (var i = 0; i < elms.length; i++) {
+    new Splide(elms[i]).mount();
+}
+</script>

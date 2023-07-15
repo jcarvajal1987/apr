@@ -3,26 +3,28 @@ export interface Props {
     title: string;
     description: string;
     img: string;
+    go: string;
 }
-const { title, description, img } = Astro.props;
+const { title, description, img, go } = Astro.props;
 ---
 
-<a href="#" class="flex flex-col">
+<a href={go} target="_blank" class="flex flex-col">
     <div class="p-1 border border-teal-800 rounded-full overflow-hidden">
-
         <div
-        style={`background-image:url('` + img + `')`}
-        class="rounded-full  w-full aspect-video bg-no-repeat bg-cover rflex"
+            style={`background-image:url('` + img + `')`}
+            class="rounded-full w-full aspect-video bg-no-repeat bg-cover rflex"
         >
+        </div>
     </div>
-</div>
-    
+
     <div class="px-4 pt-2 pb-4 flex flex-1 flex-col">
         <h1 class="montserrat mt-2 text-2xl font-semibold md:leading-5 !tracking-tight sm:text-xl text-center">
             {title}
         </h1>
 
-        <p class="pt-2 flex-1 manrope text-center text-xl sm:text-base font-medium text-black md:text-black-2 md:leading-5">
+        <p
+            class="pt-2 flex-1 manrope text-center text-xl sm:text-base font-medium text-black md:text-black-2 md:leading-5"
+        >
             {description}
         </p>
         <p

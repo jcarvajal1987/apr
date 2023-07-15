@@ -1,0 +1,40 @@
+---
+export interface Props {
+    item: string;
+}
+const { item } = Astro.props;
+---
+
+<div
+    onclick={'modal("' + item.id + '")'}
+    class="bg-white flex flex-col border border-gray-200 rounded-md overflow-hidden cursor-pointer"
+>
+    <div style={`background-image:url('` + item.img + `')`} class="w-full aspect-[5/3] bg-no-repeat bg-cover bg-[50%]">
+    </div>
+    <div class="px-4 pt-2 pb-4 flex flex-1 flex-col">
+        <h2 class="montserrat mt-2 text-2xl font-semibold md:leading-5 !tracking-tight sm:text-lg">
+            {item.title}
+        </h2>
+        <p class="pt-2 flex-1 manrope text-lg md:text-sm font-medium text-gray-900 md:text-black-2 md:!leading-6">
+            <b class="montserrat">descripción:</b>{item.description}
+        </p>
+        <p class="pt-2 flex-1 manrope text-lg md:text-sm font-medium text-gray-900 md:text-black-2 md:!leading-6">
+            <b class="montserrat">Comuna:</b>{item.comuna}
+        </p>
+        <p class="pt-2 flex-1 manrope text-lg md:text-sm font-medium text-gray-900 md:text-black-2 md:!leading-6">
+            <b class="montserrat">Dirección:</b>{item.direccion}
+        </p>
+        <p class="pt-2 flex-1 manrope text-lg md:text-sm font-medium text-gray-900 md:text-black-2 md:!leading-6">
+            <b class="montserrat">Mts2:</b>{item.mts2}
+        </p>
+        <p class="pt-2 flex-1 manrope text-lg md:text-sm font-medium text-gray-900 md:text-black-2 md:!leading-6">
+            <b class="montserrat">Dormitorios:</b>{item.dormitorios}
+        </p>
+        <p class="pt-2 flex-1 manrope text-lg md:text-sm font-medium text-gray-900 md:text-black-2 md:!leading-6">
+            <b class="montserrat">Estacionamiento:</b>{item.estacionamiento}
+        </p>
+        <p class="pt-2 flex-1 manrope text-lg md:text-sm font-medium text-gray-900 md:text-black-2 md:!leading-6">
+            <b class="montserrat">baños:</b>{item.banos}
+        </p>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+---
+export interface Props {
+    title: string;
+    id: string;
+}
+const { title, id } = Astro.props;
+---
+
+<li onclick={'aplicar("' + id + '")'} class={"flex cursor-pointer " + id}>
+    <a
+        class="text-gray-900 md:text-gray-300 manrope md:hover:text-white duration-100 py-4 px-4 md:pt-3 md:pb-3 rounded-md border-transparent text-lg place-self-center w-fit"
+        >{title}</a
+    >
+</li>

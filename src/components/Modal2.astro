@@ -11,7 +11,9 @@ const { id, title, description, img } = Astro.props;
 <div id={id} onclick={'modal("' + id + '")'} class="modal transition duration-1000 h-full 0">
     <div
         class="bg-white overflow-auto col-start-1 row-start-1 flex justify-center flex-col w-fit max-w-[1100px] md:min-w-[700px] m-auto mt-7 cursor-auto drop-shadow-xl rounded-md"
-        onclick="event.cancelBubble = true; if (event.stopPropagation) event.stopPropagation();"
+        onclick="
+        event.cancelBubble = true; if (event.stopPropagation) event.stopPropagation();
+"
     >
         <div
             class="flex p-5 fixed right-0 top-0 bg-white rounded-full drop-shadow-md md:drop-shadow-none cursor-pointer"
@@ -31,20 +33,16 @@ const { id, title, description, img } = Astro.props;
                         {title}
                     </h1>
                     <hr class="border-primary flex w-full border-[1.5px] mt-5 md:mt-4 w-full mb-7" />
-                    
-                    
+
                     {
                         description.map((item) => (
                             <span class="flex flex-row items-center pb-7 text-xl">
-                                
                                 <p class="flex flex-1 text-md">{item}</p>
                             </span>
                         ))
                     }
-                        
                 </div>
             </div>
         </div>
     </div>
 </div>
-
